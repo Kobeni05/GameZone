@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone | Registro Gamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <main class="container">
+
+        <header class="header">
+            <div class="logo">GAME<span>ZONE</span></div>
+            <p>EL SIGUIENTE NIVEL COMIENZA AQUÍ</p>
+        </header>
+
+        <section class="form-container">
+
+            <div class="form-heading">
+                <span class="tag">PLAYER REGISTRATION</span>
+                <h1>Crear cuenta</h1>
+                <p>Únete a nuestra comunidad gamer.</p>
+            </div>
+
+            <form id="registroForm">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre"
+                    placeholder="Tu nombre completo"
+                    minlength="3" maxlength="60" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="usuario">Nombre de usuario *</label>
+                    <input type="text" id="usuario" name="usuario"
+                    placeholder="Ej. PlayerOne"
+                    minlength="3" maxlength="20"
+                    pattern="[A-Za-z0-9_]+"
+                    title="Solo letras, números y guion bajo"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electrónico *</label>
+                    <input type="email" id="correo" name="correo"
+                    placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña *</label>
+                    <input type="password" id="password"
+                    name="password" placeholder="Mínimo 8 caracteres"
+                    minlength="8" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha de nacimiento *</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Género</label>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="genero"
+                            value="Masculino" required>
+                            Masculino
+                        </label>
+
+                        <label class="option">
+                            <input type="radio" name="genero"
+                            value="Femenino">
+                            Femenino
+                        </label>
+
+                        <label class="option">
+                            <input type="radio" name="genero"
+                            value="Otro">
+                            Otro
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="plataforma">Plataforma favorita *</label>
+                    <select id="plataforma" name="plataforma" required>
+                        <option value="">Selecciona una plataforma</option>
+                        <option value="PC">PC</option>
+                        <option value="PlayStation">PlayStation</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="Nintendo">Nintendo Switch</option>
+                        <option value="Mobile">Móvil</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Videojuegos favoritos</label>
+                    <div class="options games">
+                        <label class="option">
+                            <input type="checkbox" name="juegos"
+                            value="Minecraft"> Minecraft
+                        </label>
+
+                        <label class="option">
+                            <input type="checkbox" name="juegos"
+                            value="Fortnite"> Fortnite
+                        </label>
+
+                        <label class="option">
+                            <input type="checkbox" name="juegos"
+                            value="Elden Ring"> Elden Ring
+                        </label>
+
+                        <label class="option">
+                            <input type="checkbox" name="juegos"
+                            value="Cyberpunk 2077"> Cyberpunk 2077
+                        </label>
+
+                        <label class="option">
+                            <input type="checkbox" name="juegos"
+                            value="Valorant"> Valorant
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Cuéntanos sobre ti</label>
+                    <textarea id="descripcion" name="descripcion"
+                    rows="4" maxlength="300"
+                    placeholder="¿Qué tipo de videojuegos te gustan?"></textarea>
+                </div>
+
+                <div class="form-group terms">
+                    <label class="option">
+                        <input type="checkbox" id="terminos"
+                        name="terminos" required>
+                        Acepto los términos y condiciones.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-register">
+                    CREAR MI CUENTA
+                </button>
+
+                <p id="mensaje" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+        <footer>
+            <p>GAMEZONE © 2026 | TODOS LOS DERECHOS RESERVADOS</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
